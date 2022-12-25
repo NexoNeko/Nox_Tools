@@ -1,6 +1,13 @@
 #include "main.h"
-
-int talk(int wrds, int siz) {
+/**
+ * Nox_Speak - Prints a random word to stdout
+ *
+ * @wrds: amount of words to generate
+ * @siz: Size of each word
+ *
+ * Return always 0
+ */
+int Nox_Speak(int wrds, int siz) {
         int j;
         char *word;
 	char *truth;

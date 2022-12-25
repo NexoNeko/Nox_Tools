@@ -45,7 +45,7 @@ void init_array(char *arr, int lenght);
 /** +++ +++ Main_functions ++ +++ +++ */
 
 /** this will print @wrds words of @siz size to stdout */
-int talk(int wrds, int siz);
+int Nox_Speak(int wrds, int siz);
 
 /** this is the function call for the main function */
 char *nox_random(char *);
