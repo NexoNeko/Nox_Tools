@@ -1,5 +1,6 @@
 #include "nox.h"
-#include "Nox_Aux_Functions.c"
+
+void Nox_Populate_shelves(char *deck);
 
 /**
  * nox_random - This is the function caller, also sets deck initial state

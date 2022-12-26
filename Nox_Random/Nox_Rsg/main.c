@@ -1,5 +1,5 @@
 #include "nox.h"
-
+char *Nox_Random(void);
 /**
  * main - entry point for the program
  *
@@ -15,7 +15,7 @@ int main()
     {
         ptr = Nox_Random();
 
-        for(i = 0; i < 51; i++)
+        for(i = 0; i < 12; i++)
             putchar(ptr[i]);
         putchar('\n');
         b--;
