@@ -1,4 +1,4 @@
-#include "Nox_Aux_Functions.c"
+#include "nox.h"
 
 void Nox_Populate_shelves(char *deck);
 

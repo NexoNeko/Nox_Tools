@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int Nox_RTD(int i);
+int Nox_RTD(int size);
 
 int main()
 {
