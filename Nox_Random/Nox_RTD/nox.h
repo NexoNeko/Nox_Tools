@@ -6,6 +6,7 @@
 /**==================================*/
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
 #include <stdlib.h>
 #ifdef _WIN32
 	#include <windows.h>
@@ -37,4 +38,4 @@ void init_array(char *arr, int lenght);
 
 /** --- --- Aux_functions --- --- --- */
 
-#endif 
+#endif

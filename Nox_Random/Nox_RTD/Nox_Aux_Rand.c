@@ -96,11 +96,13 @@ char Nox_Str_Get_Random(char *string)
 {
     int string_length, random_index;
     char random_char;
-    
+
+    if (!string)
+	    return ('\0');
     srand((unsigned) time(NULL));
-    string_length = sizeof(string) / sizeof(char);
+    string_length = strlen(string) / sizeof(char);
     random_index = rand() % string_length;
     random_char = string[random_index];
-    
+
     return (random_char);
 }

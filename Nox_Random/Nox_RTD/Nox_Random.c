@@ -9,7 +9,7 @@ void Nox_Populate_shelves(char *deck);
  */
 char *Nox_Random(void)
 {
-    char *randptr = malloc(53 * sizeof(char));
+    char *randptr = malloc(52 * sizeof(char));
     int j, n = 4, i = 0, dt = 51, db = 0;
     char deck[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
                     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
@@ -62,7 +62,5 @@ char *Nox_Random(void)
     for(i = 0; i < 51; i++)
         randptr[i] = temp[i];
 
-
     return(randptr);
 }
-
