@@ -1,5 +1,7 @@
 #include "nox.h"
 
+char Nox_Str_Get_Random(char *string);
+
 /**
  * Nox_RTD - Rolls a dice of set size, it supports from 2 to 51 or 100 faces.
  *

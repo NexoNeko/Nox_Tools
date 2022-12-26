@@ -7,6 +7,9 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#ifdef _WIN32
+	#include <windows.h>
+#endif
 
 /**==================================*/
 /**========= macro defins ===========*/
