@@ -1,4 +1,9 @@
 #include "nox.h"
+#include "Nox_Aux_Rand.c"
+#include "Nox_Random.c"
+
+void Nox_Populate_shelves(char *deck);
+char *Nox_Random(void);
 
 /**
  * Nox_RTD - Rolls a dice of set size, it supports from 2 to 51 or 100 faces.
@@ -16,7 +21,7 @@ int Nox_RTD(int size)
 	if (!arr)
 	{
 		fprintf(stderr, "Error 01: Failed to allocate memory to heap");
-		return(NULL);
+		return(0);
 	}
 	if (size <= 1)
 		size = 2;
@@ -46,14 +51,14 @@ int Nox_RTD(int size)
 			break;
 	}
 	roll_delimiter = Nox_Str_Get_Random(seed);
-	
+
 	for (i = 0; i < size; i++)
 	{
 		if (arr[i] >= roll_delimiter && roll_delimiter < arr[i + 1])
 			break;
 	}
 	free(arr);
-	
+
 	if (Flag_Hundread == 1 && i > 25)
 	{
 		size_total = Nox_Str_Get_Random(seed);

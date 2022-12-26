@@ -1,5 +1,5 @@
-#ifndef NOX_H_INCLUDED
-#define NOX_H_INCLUDED
+#ifndef NOX_H
+#define NOX_H
 
 /**==================================*/
 /**========= header files ===========*/
@@ -34,4 +34,4 @@ void init_array(char *arr, int lenght);
 
 /** --- --- Aux_functions --- --- --- */
 
-#endif 
+#endif
