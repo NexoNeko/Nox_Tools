@@ -1,4 +1,4 @@
-#include "nox.h"
+#include <stdio.h>
 
 int Nox_RTD(int i);
 
