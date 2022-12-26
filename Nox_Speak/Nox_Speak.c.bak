@@ -35,7 +35,7 @@ int Nox_Speak(int wrds, int siz)
 	if (siz < 2)
 		siz = WORD_SIZE_INIT;
 
-		for (j = 1; j; ) 
+		for (j = 1; j; )
 		{
 			word = Nox_Random(deck);
 			init_array(line, MAX_LINE_LENGTH);

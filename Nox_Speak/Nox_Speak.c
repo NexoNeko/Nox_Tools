@@ -34,32 +34,31 @@ int Nox_Speak(int wrds, int siz)
 		return(0);
 	if (siz < 2)
 		siz = WORD_SIZE_INIT;
-
-		for (j = 1; j; )
+	for (j = 1; j; )
+	{
+		word = Nox_Random(deck);
+		init_array(line, MAX_LINE_LENGTH);
+		rewind(file);
+		while (fgets(line, MAX_LINE_LENGTH, file) != NULL) 
 		{
-			word = Nox_Random(deck);
-			init_array(line, MAX_LINE_LENGTH);
-			rewind(file);
-			while (fgets(line, MAX_LINE_LENGTH, file) != NULL) 
+			truth = Nox_Strstr(word, line, siz);
+			if (truth) 
 			{
-				truth = Nox_Strstr(word, line, siz);
-				if (truth) 
+				printf("%s", truth);
+				siz += WORD_SIZE_ADD;
+				if (wrds == WORDS_TO_GENERATE)
 				{
-					printf("%s", truth);
-					siz += WORD_SIZE_ADD;
-					if (wrds == WORDS_TO_GENERATE)
-					{
-						free(word);
-						fclose(file);
-						return(0);
-					}
-					else
-						wrds++;
+					free(word);
+					fclose(file);
+					return(0);
 				}
+				else
+					wrds++;
 			}
-		free(word);
 		}
-		return 0;
+	free(word);
+	}
+return 0;
 }
 
 
