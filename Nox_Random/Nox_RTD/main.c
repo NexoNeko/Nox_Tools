@@ -1,18 +1,29 @@
 #include "nox.h"
-
-int Nox_RTD(int size);
-
+char *Nox_Random(void);
+/**
+ * main - entry point for the program
+ *
+ * Return: always 0;
+ */
 int main()
 {
-	int i, n;
+    char *ptr;
+    int i, b;
 
-	printf("hello world");
+    b = 72;
+    while (b > 0)
+    {
+        ptr = Nox_Random();
 
-	for (n = 0; n < 10; n++)
-	{
-		i = Nox_RTD(6);
-		printf("%d\n", i);
-	}
+        for(i = 0; i < 51; i++)
+            putchar(ptr[i]);
+        putchar('\n');
+        b--;
 
-	return(0);
+        free(ptr);
+    }
+    printf("\nThere we go, i'm done.\nPress any key to exit.");
+    getchar();
+
+    return (0);
 }
