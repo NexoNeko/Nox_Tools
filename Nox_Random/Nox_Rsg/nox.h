@@ -34,14 +34,4 @@ void init_array(char *arr, int lenght);
 
 /** --- --- Aux_functions --- --- --- */
 
-/** +++ +++ NOX_functions ++ +++ +++ */
-
-/** this is the function call for the NOX function */
-char *Nox_Random();
-
-/** Randomizes shelves and saves it to the deck */
-void Nox_Populate_shelves(char *deck);
-
-/** --- --- NOX_functions --- --- --- */
-
 #endif 

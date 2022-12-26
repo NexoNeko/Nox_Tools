@@ -1,4 +1,5 @@
 #include "nox.h"
+#include "Nox_Aux_Functions.c"
 
 /**
  * nox_random - This is the function caller, also sets deck initial state

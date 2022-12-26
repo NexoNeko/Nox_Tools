@@ -1,4 +1,4 @@
-#include "main.h"
+#include "nox.h"
 
 /**
  * main - entry point for the program

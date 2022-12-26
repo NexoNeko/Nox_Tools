@@ -4,8 +4,6 @@
 /**==================================*/
 /**========= header files ===========*/
 /**==================================*/
-#include <string.h>
-#include <math.h>
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -36,20 +34,4 @@ void init_array(char *arr, int lenght);
 
 /** --- --- Aux_functions --- --- --- */
 
-/** +++ +++ NOX_functions ++ +++ +++ */
-
-/** this will print @wrds words of @siz size to stdout */
-int Nox_Speak(int wrds, int siz);
-
-/** this is the function call for the NOX function */
-char *Nox_Speak_Glibberish(char *);
-
-/** Randomizes shelves and saves it to the deck */
-void Nox_Populate_shelves(char *deck);
-
-/** Searches for a string, like strstr but different */
-char *_strstr(char *haystack, char *needle, int siz);
-
-/** --- --- NOX_functions --- --- --- */
-
-#endif
+#endif 
