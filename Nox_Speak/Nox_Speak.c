@@ -1,4 +1,5 @@
-#include "main.h"
+#include "nox.h"
+#include <string.h>
 
 /**+++ randomizer defins +++ */
 #define MAX_LINE_LENGTH 64
@@ -36,7 +37,7 @@ int Nox_Speak(int wrds, int siz)
 		siz = WORD_SIZE_INIT;
 	for (j = 1; j; )
 	{
-		word = Nox_Random(deck);
+		word = Nox_Speak_Glibberish(deck);
 		init_array(line, MAX_LINE_LENGTH);
 		rewind(file);
 		while (fgets(line, MAX_LINE_LENGTH, file) != NULL) 

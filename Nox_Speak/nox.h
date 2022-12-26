@@ -1,9 +1,11 @@
-#ifndef MAIN_H_INCLUDED
-#define MAIN_H_INCLUDED
+#ifndef NOX_H_INCLUDED
+#define NOX_H_INCLUDED
 
 /**==================================*/
 /**========= header files ===========*/
 /**==================================*/
+#include <string.h>
+#include <math.h>
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -34,14 +36,20 @@ void init_array(char *arr, int lenght);
 
 /** --- --- Aux_functions --- --- --- */
 
-/** +++ +++ Main_functions ++ +++ +++ */
+/** +++ +++ NOX_functions ++ +++ +++ */
 
-/** this is the function call for the main function */
-char *nox_random();
+/** this will print @wrds words of @siz size to stdout */
+int Nox_Speak(int wrds, int siz);
+
+/** this is the function call for the NOX function */
+char *Nox_Speak_Glibberish(char *);
 
 /** Randomizes shelves and saves it to the deck */
-void populate_shelves(char *deck);
+void Nox_Populate_shelves(char *deck);
 
-/** --- --- Main_functions --- --- --- */
+/** Searches for a string, like strstr but different */
+char *_strstr(char *haystack, char *needle, int siz);
 
-#endif 
+/** --- --- NOX_functions --- --- --- */
+
+#endif

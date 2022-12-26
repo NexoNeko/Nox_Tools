@@ -11,3 +11,5 @@ Potentially, this could be turned into an RNG, by converting the values to integ
 
 
 This program is not supposed to print the same string twice, yet sometimes it does, you can appreciate this in the SAMPLE_OUTPUT file, 2 strings repeated in a series of 1050 strings. The first string at line @480, with it's doppleganger @785 and the second line @374, it's doppleganger @552.
+
+You will need an instance of Nox_Aux_Functions.c for this to work well.

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "nox.h"
 
 int main()
 {
