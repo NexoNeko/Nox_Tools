@@ -1,5 +1,3 @@
-#include "nox.h"
-#include "Nox_Aux_Rand.c"
 #include "Nox_Random.c"
 
 void Nox_Populate_shelves(char *deck);
