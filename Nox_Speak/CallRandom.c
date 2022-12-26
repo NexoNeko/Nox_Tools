@@ -5,7 +5,7 @@
  *
  * Return: String of 51 characters
  */
-char *nox_random(char *deck)
+char *Nox_Random(char *deck)
 {
     char *randptr = malloc(53 * sizeof(char));
     int j, n = 4, i = 0, dt = 51, db = 0;

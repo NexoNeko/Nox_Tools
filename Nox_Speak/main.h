@@ -16,12 +16,6 @@
 #define MINUS(a) ((a) > 96 && (a) < 123 ? 1 : 0 )
 #define MAXUS(a) ((a) > 64 && (a) < 91 ? 1 : 0 )
 
-/**+++ randomizer defins +++ */
-#define MAX_LINE_LENGTH 64
-#define WORDS_TO_GENERATE 1
-#define WORD_SIZE_INIT 2
-#define WORD_SIZE_ADD 0
-
 /**==================================*/
 /**===== function signatures=========*/
 /**==================================*/
@@ -48,7 +42,7 @@ void init_array(char *arr, int lenght);
 int Nox_Speak(int wrds, int siz);
 
 /** this is the function call for the main function */
-char *nox_random(char *);
+char *Nox_Random(char *);
 
 /** Randomizes shelves and saves it to the deck */
 void populate_shelves(char *deck);

@@ -13,7 +13,7 @@ int main()
     b = 72;
     while (b > 0)
     {
-        ptr = nox_random();
+        ptr = Nox_Random();
 
         for(i = 0; i < 51; i++)
             putchar(ptr[i]);

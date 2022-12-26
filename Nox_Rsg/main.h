@@ -37,7 +37,7 @@ void init_array(char *arr, int lenght);
 /** +++ +++ Main_functions ++ +++ +++ */
 
 /** this is the function call for the main function */
-char *nox_random();
+char *Nox_Random();
 
 /** Randomizes shelves and saves it to the deck */
 void populate_shelves(char *deck);
