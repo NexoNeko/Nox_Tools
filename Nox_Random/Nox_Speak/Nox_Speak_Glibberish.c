@@ -1,4 +1,4 @@
-#include "main.h"
+#include "nox.h"
 
 /**
  * nox_random - This is the function caller, also sets deck initial state
