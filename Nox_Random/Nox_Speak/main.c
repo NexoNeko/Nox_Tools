@@ -2,12 +2,13 @@
 
 int main()
 {
-	printf("Today, I will ");
+	printf("\n\n");
 	Nox_Speak(1, 4);
-	printf(" and ");
+	printf(" 2022 ");
 	Nox_Speak(1, 3);
-	printf(". Get it?\nI'm a ");
+	printf(" 2022 ");
 	Nox_Speak(1, 4);
-	printf(" beyetch\n");
+	printf(" 2022");
+	printf("\n\n");
 	return(0);
 }
