@@ -14,16 +14,16 @@
 int *Nox_Count_Char_Repeat(char *a) {
     int *cnt = malloc(128 * sizeof(int));
     int i, size = strlen(a);
-    char *arr = malloc(size * sizeof(int));
+    char *arr = malloc(size * sizeof(int) + 1);
 
     for (i = 0; i < 128; i++)
         cnt[i] = 0;
 
     strcpy(arr, a);
-    while(*a++)
-        for (i = 0; i < size; i++)
-            if (*a == arr[i])
-                cnt[(int)arr[i]]++;
+    for (i = 0; i < size; i++)
+        if (a[i] == arr[i])
+            cnt[(int)arr[i]]++;
+
     free(arr);
     return (cnt);
 }

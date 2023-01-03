@@ -5,10 +5,12 @@
 /**========= header files ===========*/
 /**==================================*/
 #include <string.h>
-#include <math.h>
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#if defined(_WIN32) || defined(_WIN64)
+	#include <windows.h>
+#endif
 
 /**==================================*/
 /**========= macro defins ===========*/

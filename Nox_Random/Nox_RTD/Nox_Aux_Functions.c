@@ -11,21 +11,21 @@
  */
 int get_i_value(void)
 {
-	int i;
+    int i;
 
-	i = (mil() % 10);
+    i = (mil() % 10);
 
 	while (i > 4)
-	{
-		i = i >> 1;
-		if (i < 0)
-		{
-			wait_mill(1, 2);
-			i = (mil() % 10);
-		}
-	}
-	wait_mill(1, 2);
-	return(i);
+    {
+        i = i >> 1;
+        if (i < 0)
+        {
+            wait_mill(1, 2);
+            i = (mil() % 10);
+        }
+    }
+    wait_mill(1, 2);
+    return(i);
 }
 
 /**
@@ -35,18 +35,9 @@ int get_i_value(void)
  */
 int mil(void)
 {
-	#ifdef _WIN32
-	FILETIME fileTime;
-	GetSystemTimeAsFileTime(&fileTime);
-	ULARGE_INTEGER time;
-	time.LowPart = fileTime.dwLowDateTime;
-	time.HighPart = fileTime.dwHighDateTime;
-	return (int)(time.QuadPart / 10000);
-	#else
-		struct timespec spec;
-		clock_gettime(CLOCK_REALTIME, &spec);
-		return (spec.tv_sec * 1000 + ((spec.tv_nsec >> 20) + 1));
-	#endif
+	struct timespec spec;
+	clock_gettime(CLOCK_REALTIME, &spec);
+	return (spec.tv_sec * 1000 + ((spec.tv_nsec >> 20) + 1));
 }
 
 /**
@@ -57,23 +48,19 @@ int mil(void)
  */
 void wait_mill(int min_milliseconds, int max_milliseconds)
 {
-	#ifdef _WIN32
-		FILETIME fileTime;
-		GetSystemTimeAsFileTime(&fileTime);
-		ULARGE_INTEGER time;
-		time.LowPart = fileTime.dwLowDateTime;
-		time.HighPart = fileTime.dwHighDateTime;
-		return (int)(time.QuadPart / 10000);
-	#else
-		int milliseconds;
-		long nanoseconds;
-		struct timespec delay_time = {0};
-		srand(time(0));
-		milliseconds = min_milliseconds + rand() % (max_milliseconds - min_milliseconds + 1);
-		nanoseconds = milliseconds * 1000000;
-		delay_time.tv_nsec = nanoseconds;
-		nanosleep(&delay_time, NULL);
-	#endif
+	int milliseconds;
+	long nanoseconds;
+	struct timespec delay_time = {0};
+
+	srand(time(0));
+
+	milliseconds = min_milliseconds + rand() % (max_milliseconds - min_milliseconds + 1);
+
+	nanoseconds = milliseconds * 1000000;
+
+	delay_time.tv_nsec = nanoseconds;
+
+	nanosleep(&delay_time, NULL);
 }
 
 /**
@@ -85,8 +72,8 @@ void wait_mill(int min_milliseconds, int max_milliseconds)
  */
 void init_array(char *arr, int lenght)
 {
-	int i = 0;
+    int i = 0;
 
-	while(i < lenght)
-		arr[i++] = '\0';
+    while(i < lenght)
+        arr[i++] = '\0';
 }

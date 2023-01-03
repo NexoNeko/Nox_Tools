@@ -31,7 +31,7 @@ char *Nox_Random(void)
     {
         Nox_Populate_shelves(deck);
     }
-    init_array(randptr, 53);
+    init_array(randptr, 52);
     temp[dt] = '\0';
     dt--;
 
@@ -62,5 +62,7 @@ char *Nox_Random(void)
     for(i = 0; i < 51; i++)
         randptr[i] = temp[i];
 
+
     return(randptr);
 }
+

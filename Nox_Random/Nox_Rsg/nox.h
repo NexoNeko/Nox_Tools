@@ -6,7 +6,11 @@
 /**==================================*/
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
 #include <stdlib.h>
+#if defined(_WIN32) || defined(_WIN64)
+	#include <windows.h>
+#endif
 
 /**==================================*/
 /**========= macro defins ===========*/
@@ -34,4 +38,4 @@ void init_array(char *arr, int lenght);
 
 /** --- --- Aux_functions --- --- --- */
 
-#endif 
+#endif
