@@ -1,2 +1,2 @@
 # Nox_Tools
-Tools for working with C, i might make it a library at some point
+C functions and programs to perform specific tasks, these are all WIP.
