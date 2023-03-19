@@ -1,0 +1,101 @@
+When calculating the big O, we just care about the most significant portion of complexity. Goto *2
+Big O always assumes the worst case, that is the longest complexity. Goto *3
+
+O(1) or constant complexity- Time does not increase with n
+	Say, your program gets an input and gives an output, that's it.
+	The program never iterates through n at all, so the time it takes
+	to execute is always the same.
+
+O(n) or linear complexity - Time increases with number of items.
+	To sum 123456 and 123456 we need to sum 7 numbers, because we carry the 10's
+	that means that we perform 6 operations per 6 numbers.
+	So if we need to perform a sum of 100 numbers, we need to perform 100 operations
+	per 100 numbers.
+
+O(n^2) or quadratic complexity - Time increases ^2 of numbers
+	To multiply 123456 by 123456 we must multiply the first number
+	in 123456 by every number in 123456.
+	That means that we need to do 6*6 == 36 operations to perform this task as well as some adds.
+	Say, if we got a 100 digit number we would have to do 10,000 multiplications and around 200 adds.
+	So the algorithm scales at n squared.
+
+	**2 - we could express this multiplication as n^2 + 2n. But if we operate on a million digits, the
+	resulting 2n becomes insignificant, ammounting to only 0.0002% of operations, hence it is not relevant.
+
+O(log n) or logarithmic complexity - just read the example
+	Say, we are looking for 'John smith' in a phone book with 1,000,000 names.
+	To do this we could implement a binary search: We open the phone book exactly in the middle
+	that is the 500,000th page and read a name, if that name > than john smith, we take the first half.
+	if the name < than john smith, we take the second half.
+	Now we divide this section in half and do the same, until we find john smith.
+	So, for 7 pages at most 3 searches
+	for a 15 page it takes at most 4 searches.
+	for 1,000,000 takes at most 20 searches.
+	So the algorithm scales logarithmically, it divides in half and half and half.
+
+	**3 - Big O defines 3 scenarios but we must assume the worst case scenario usually.
+	That is, this algorithm of ours defines the following:
+	 Best case: O(1) Instant complexity - we get lucky and find the value in one comparsion
+	 Expected case: In this case, O(log n)
+	 Worst case: In this case, O(log n)
+	As another example, if youre looking for a name and all you got is a phone number, you can compare
+	the numbers one by one. The values are unordered, they follow no pattern, hence you will have to
+	compare it one by one.
+	 Best case: O(1)
+	 Expected case: O(n)
+	 Worst case: O(n)
+	So, every time n increases by an ammount k, the time or space increases by k/Δ
+	In a binary search Δ = 2
+
+O(n!) or factorial/combinatorial complexity - the worst of em all
+	Say, you got a traveling salesman, he has to visit 3 towns connected by roads.
+	You could go
+	A->B->C
+	A->C->B
+	B->A->C
+	That's the total of non-repeating possibilities.
+	Now, if you have 4 towns, you suddenly got 12 possibilities
+	because 4 x 3 x 2 x 1 = 12
+	This is 4 factorial, that is 4!, that is 4*(4-1)
+	So, since the complexity increases in a factorial fashion, we can say that O(n!)
+	By the time you get to 200 towns, there isn't enough time left in the universe 
+	to solve the problem with traditional computers.
+
+O(nlog n) - or loglinear complexity
+	nlogn implies that the log operation will be executed n times
+	For example, merge sort
+	 Divide list in two
+	 Then compare if left > right, if true divide in two, keep doing this until you got only singles
+	 Now compare if left > right, if true then swap them, do this for every number and merge them all.
+	 And there you go, nlog n.
+	This scales with log n, but depends on list size, so it scales with nlog(n) size.
+	Since the operation will be executed n times. That is:
+
+	100->50->25->12->6->3->2->1
+	100->500->250->125->62->31->15->1
+	1000->500->250->125->62->31->15->1
+	
+	The longer the list, the operation increases by O(n)
+	But ultimately, the merging operation will take (log n) to execute.
+
+O(n^x) or polynomial time - covers a variety of time complexities, O(n^2) and O(n) for example
+	X represents the number of times all the values of n will be processed for every value in n.
+	so to say O(4^2) means that 	value 1 will be processed twice
+						value 2 will be processed twice
+						value 3 will be processed twice
+						value 4 will be processed twice
+	And finally the algorithm will finish after performing all those operations.
+	for (i = 0; i < lenght; i++)
+		for (j = 0; j > lenght; j++)
+			if (i + j == desired_value)
+				return(i + j);
+
+
+O(X^n) or exponential time - rarely encountered in computers, tower of hanoi is an example of this thing
+	Basically, the time increments exponentially for every n.
+	In tower of hanoi, O(2^n) is implemented, n being the number of disks.
+	Meaning, for a 4 disk tower (3 + base) you will solve it in O(2^4).
+	The tower of hanoi is solved int 2*n - 1 moves, that is, 2*4 - 1 = 7.
+	If you ever find a complexity like this in compsci, something went very wrong.
+	The held–Karp algorithm solves the salesman problem in exponential time.
+
