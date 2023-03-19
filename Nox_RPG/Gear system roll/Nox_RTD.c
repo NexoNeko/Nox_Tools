@@ -42,7 +42,7 @@ int Nox_RTD(int size)
 			if (size_group > 'z')
 				break;
 		}
-		arr[arr_index] = (int)size_group;
+		arr[arr_index] = size_group;
 		arr_index++;
 		if ((arr_index + 1) == size)
 			break;

@@ -1,4 +1,5 @@
 #include "nox.h"
+int Nox_RTD(int);
 
 char *Nox_Random(void);
 /**
@@ -47,16 +48,16 @@ int main()
 		/** Rarity */
 		rarity = Nox_RTD(5);
 		printf("You got: ");
-		
+
 		/** roll lucky list */
 		luck = Nox_RTD(12);
-		
+
 		/** If luck equals 12, rarity gets an extra*/
 		if (luck <= 2 && rarity > 1)
 			rarity--;
 		if (luck == 12 && rarity < 5)
 			rarity++;
-		
+
 		/** rarity holds the rarity of the gem, as such
 			we can send the rarity to quantity rarity
 			to figure out how many we need.
@@ -87,7 +88,7 @@ int main()
 				break;
 		}
 		item_material = Nox_RTD(15);
-		
+
 		printf("%d ", quantity);
 
 		if (rarity < 5)
@@ -98,10 +99,10 @@ int main()
 		if (rarity >= 5)
 			printf("%s", rarities[rarity]);
 		putchar('\n');
-		
+
 		printf("Price: %d", price);
 		putchar('\n');
-		
+
 		printf("Press ENTER to generate a new item");
 		getchar();
 	}

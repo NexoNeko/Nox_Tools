@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "nox.h"
 
 /**
  * Nox_Str_Get_Random - Returns a random char from a string
