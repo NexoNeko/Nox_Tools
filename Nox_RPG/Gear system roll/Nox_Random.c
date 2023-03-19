@@ -27,7 +27,7 @@ char *Nox_Random(void)
         exit(0);
     }
 
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < 3; i++)
     {
         Nox_Populate_shelves(deck);
     }
