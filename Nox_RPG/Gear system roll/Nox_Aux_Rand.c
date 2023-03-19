@@ -18,7 +18,7 @@ void Nox_Populate_shelves(char *deck)
 	char s1[25], s2[25], s3[25], s4[25], s5[25];
 	char *arrays[5];
 	char *s_current = NULL;
-	int i, j, decnt = 0; /** decnt - deck count */
+	int i = 0, j = 0, decnt = 0; /** decnt - deck count */
 	int t[] = { 24, 24, 24, 24, 24 };
 	int b[] = { 0, 0, 0, 0, 0 };
 

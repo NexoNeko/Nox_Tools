@@ -42,9 +42,11 @@ int Nox_RTD(int size)
 			if (size_group > 'z')
 				break;
 		}
+		if (arr_index > size)
+            arr_index = size - 1;
 		arr[arr_index] = size_group;
 		arr_index++;
-		if ((arr_index + 1) == size)
+		if ((arr_index + 1) == size || arr_index >= size)
 			break;
 	}
 	roll_delimiter = Nox_Str_Get_Random(seed);
@@ -63,5 +65,7 @@ int Nox_RTD(int size)
 	}
 	free(seed);
 	free(arr);
+	if (i == 0)
+        i = 1;
 	return(i);
 }

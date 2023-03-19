@@ -51,12 +51,12 @@ int main()
 
 		/** roll lucky list */
 		luck = Nox_RTD(12);
-
 		/** If luck equals 12, rarity gets an extra*/
 		if (luck <= 2 && rarity > 1)
-			rarity--;
+            rarity--;
 		if (luck == 12 && rarity < 5)
-			rarity++;
+            rarity++;
+
 
 		/** rarity holds the rarity of the gem, as such
 			we can send the rarity to quantity rarity
@@ -70,7 +70,7 @@ int main()
 		price = price_rarity[rarity] * quantity;
 
 		/** Apply luck modifiers to price*/
-		switch (luck)
+        switch(luck)
 		{
 			case 3:
 				price /= 2;
@@ -100,11 +100,12 @@ int main()
 			printf("%s", rarities[rarity]);
 		putchar('\n');
 
-		printf("Price: %d", price);
+		printf("Price: %d\n", price);
 		putchar('\n');
 
-		printf("Press ENTER to generate a new item");
+		printf("Press ENTER to generate a new item\n");
 		getchar();
+		printf("------------------------------------\n");
 	}
 
     return (0);
