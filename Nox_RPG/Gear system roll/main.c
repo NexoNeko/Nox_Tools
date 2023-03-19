@@ -1,5 +1,5 @@
 #include "nox.h"
-#include <time.h>
+
 char *Nox_Random(void);
 /**
  * main - entry point for the program
@@ -8,14 +8,54 @@ char *Nox_Random(void);
  */
 int main()
 {
-    int ptr;
-    int i;
+	char *modifiers[] = {
+		"Ornamental",
+        "Ornamental",
+        "Semiprecious",
+        "Fancy",
+        "Precious",
+        "Gem"
+    };
+    char *material[] = {
+	"Chlorastrolite",
+    "Chlorastrolite",
+    "Malachite",
+    "Aventurine",
+    "Rhodonite",
+    "Amethyst",
+    "Fluorospar",
+    "Garnet",
+    "Alexandrite",
+    "Topaz",
+    "Heliotrope",
+    "Sapphire",
+    "Diamond",
+    "Fire Opal",
+    "Ruby",
+    "Emerald"
+    };
 
-    ptr = Nox_RTD(6);
+    int price, D5, D5A, D12, Gem;
 
-	printf("ptr: %d", ptr);
+    
+    printf("You got: ");
+	
+	/** Quantity */
+	D12 = Nox_RTD(12);
+	printf("%d ", D12);
+	
+	/** Quality n Material */
+	D5 = Nox_RTD(5);
+	D5A = Nox_RTD(5);
+	if (D5 < 5)
+	{
+		printf("%s %s", modifiers[D5], material[D5A]);
+	}
+	else
+	{
+		printf("%s %s", material[D5A], modifiers[D5]);
+	}
 
-    printf("\nThere we go, i'm done.\nPress any key to exit.");
     getchar();
 
     return (0);
