@@ -32,6 +32,17 @@ For simplicity, the rarity of the gems is 1/15 for each.
 Chlorastrolite, Malachite, Aventurine, Rhodonite,Amethyst, Fluorospar, Garnet, Alexandrite, Topaz, Heliotrope, Sapphire, Diamond, Fire Opal, Ruby, Emerald.
 
 
-## License
+## Installation
 
-[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
+Just run Gem_roller.exe on windows. 
+
+This software is not compatible with linux at the momment.
+
+To compile this program locally, compile all C files together:
+```cmd
+  gcc *.c
+```
+
+[![GPL 3.0 License](https://img.shields.io/badge/License-GPL%203.0-yellow.svg?style=plastic)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+
+[![C99 compilant](https://img.shields.io/badge/C99-ISO/IEC%209899:1999-blue.svg?style=plastic&logo=c%2B%2B)](https://en.cppreference.com/w/c/99)
