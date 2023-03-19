@@ -6,4 +6,3 @@ To call upon Nox_Speak, simply call the function with the following parameters: 
 
 main.c contains usage example.
 
-Authors: NexoNeko
