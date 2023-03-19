@@ -11,12 +11,15 @@ int main()
     int ptr;
     int i;
 
-    ptr = Nox_RTD(6);
+    while(1)
+    {
+        ptr = Nox_RTD(100);
 
-	printf("ptr: %d", ptr);
+        printf("ptr: %d", ptr);
 
-    printf("\nThere we go, i'm done.\nPress any key to exit.");
-    getchar();
+        printf("\nPress ENTER to Roll The Dice (1d100)");
+        getchar();
+    }
 
     return (0);
 }
