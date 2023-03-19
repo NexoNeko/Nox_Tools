@@ -15,7 +15,7 @@ int main()
     {
         ptr = Nox_Random();
 
-        for(i = 0; i < 12; i++)
+        for(i = 0; i < 51; i++)
             putchar(ptr[i]);
         putchar('\n');
         b--;
