@@ -1,15 +1,37 @@
-# Nox_Rsg
-This is a simple RandomStringGenerator based on the 52 factorial principle.
+# Gem roller
 
-This program will generate a string of 51 characters (from A to Z and a to z). Some characters might repeat 1 time randomly, this is all to ensure randomness and minimize repetitions.
+This program is part of my RPG-companion series, as such most of it's functionality depends on Nox_RTD for die rolls.
+
+At each roll, the program will return a varying amount of jewels of varying quality and value.
+The quantity, quality and value are chosen according to the following tables:
+
+### Rarity:
+Rarity will be treated as a prefix, except for the 'Gem' rarity, which will be treated as a suffix.
+Type| Base value in gold pieces | Quantity |
+--- | --- | --- | 
+Ornamental| 10 | 1d10 |
+Semiprecious| 50 | 1d8 |
+Fancy | 100 | 1d6 |
+Precious | 500 | 1d4 |
+Gem | 1000 | 1d2 |
+
+### Value adjustement:
+1d12| Value adjustement |
+--- | --- |
+2| Next Lower Value Row |
+3| 1/2 |
+4 | 3/4 |
+5 - 9 | Normal value |
+10 | 1.5 times |
+11 | 2 times |
+12 | Next Higher Value Row |
+
+### Gem types
+For simplicity, the rarity of the gems is 1/15 for each.
+
+Chlorastrolite, Malachite, Aventurine, Rhodonite,Amethyst, Fluorospar, Garnet, Alexandrite, Topaz, Heliotrope, Sapphire, Diamond, Fire Opal, Ruby, Emerald.
 
 
-Potentially, this could be turned into an RNG, by converting the values to integers, or even assign a singular value to a group of chars.
- 
- For example, to make a 6 sided die, you'd need to divide all the chars in groups of 8 chars and assign 1 return value to each group to ensure an uniform distribution.
- Since you'd get a 4-character leftover, make it reroll every time it lands on the 4 character group, and you got quite a fair dice roller, theorically with an 1/6 chance.
+## License
 
-
-This program is not supposed to print the same string twice, yet sometimes it does, you can appreciate this in the SAMPLE_OUTPUT file, 2 strings repeated in a series of 1050 strings. The first string at line @480, with it's doppleganger @785 and the second line @374, it's doppleganger @552.
-
-You will need an instance of Nox_Aux_Functions.c for this to work well.
+[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
