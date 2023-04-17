@@ -88,7 +88,6 @@ int main()
 				break;
 		}
 		item_material = Nox_RTD(15);
-
 		printf("%d ", quantity);
 
 		if (rarity < 5)
@@ -104,7 +103,11 @@ int main()
 		putchar('\n');
 
 		printf("Press ENTER to generate a new item\n");
+		printf("%d\n", luck);
+		printf("%d\n", rarity);
+		printf("%d\n", item_material);
 		getchar();
+
 		printf("------------------------------------\n");
 	}
 
