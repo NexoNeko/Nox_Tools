@@ -1,7 +1,7 @@
 #include "nox.h"
 #include <time.h>
 char *Nox_Random(void);
-int Nox_RTD(int);
+
 /**
  * main - entry point for the program
  *
@@ -13,13 +13,14 @@ int main()
     int i;
 
     while(1)
-      {
+    {
         ptr = Nox_RTD(100);
 
-        printf("Roll: %d", ptr);
+        printf("ptr: %d", ptr);
 
+        printf("\nPress ENTER to Roll The Dice (1d100)");
         getchar();
-      }
+    }
 
     return (0);
 }

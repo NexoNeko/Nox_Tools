@@ -28,7 +28,7 @@ int main()
 		"Emerald"
     };
 	char *rarities[] = {
-		"Ornamental",
+	"Ornamental",
         "Ornamental",
         "Semiprecious",
         "Fancy",
@@ -103,9 +103,11 @@ int main()
 		putchar('\n');
 
 		printf("Press ENTER to generate a new item\n");
+		/** Debug messages
 		printf("%d\n", luck);
 		printf("%d\n", rarity);
 		printf("%d\n", item_material);
+		*/
 		getchar();
 
 		printf("------------------------------------\n");

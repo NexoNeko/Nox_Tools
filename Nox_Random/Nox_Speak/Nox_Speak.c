@@ -40,6 +40,9 @@ int Nox_Speak(int wrds, int siz)
 		while (fgets(line, MAX_LINE_LENGTH, file) != NULL) 
 		{
 			truth = Nox_Strstr(word, line, siz);
+			/** Visualize line 
+			printf("line: %s ", word);
+			*/
 			if (truth) 
 			{
 				printf("%s", truth);
